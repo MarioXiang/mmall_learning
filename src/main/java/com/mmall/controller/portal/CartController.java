@@ -35,6 +35,7 @@ public class CartController {
 
 
     @RequestMapping("add.do")
+    @ResponseBody
     public ServerResponse<CartVo> add(HttpSession session, Integer count, Integer productId) {
         User user = (User) session.getAttribute(Const.CURRENT_USER);
         if (user == null) {
@@ -45,6 +46,7 @@ public class CartController {
 
 
     @RequestMapping("update.do")
+    @ResponseBody
     public ServerResponse<CartVo> update(HttpSession session, Integer count, Integer productId) {
         User user = (User) session.getAttribute(Const.CURRENT_USER);
         if (user == null) {
@@ -55,6 +57,7 @@ public class CartController {
 
 
     @RequestMapping("delete_product.do")
+    @ResponseBody
     public ServerResponse<CartVo> deleteProduct(HttpSession session, String productIds) {
         User user = (User) session.getAttribute(Const.CURRENT_USER);
         if (user == null) {
