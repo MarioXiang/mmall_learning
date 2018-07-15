@@ -2,6 +2,7 @@ package com.mmall.common;
 
 /**
  * Created by 10448 on 2017/12/10.
+ * 注释
  */
 public enum ResponseCode {
 
